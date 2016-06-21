@@ -42,5 +42,5 @@ df <- tbl_df(cbind(subject,activities,data))
 df2 <- aggregate(df[,3:55],df[,1:2],mean)
 
 # Export the data as CSV
-tidyPath <- paste0(wd,"/tidyData.csv")
-write.csv(df2,tidyPath)
+tidyPath <- paste0(wd,"/tidyData.txt")
+write.table(df2,tidyPath,row.name=FALSE)
